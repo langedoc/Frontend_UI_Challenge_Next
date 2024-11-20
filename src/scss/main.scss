@@ -33,3 +33,17 @@ a {
     text-decoration: none;
     color: $primary-color;
 }
+
+.layout-wrapper {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    padding: $spacing-base;
+    margin-top: $top-header-spacing;
+    
+    @media (max-width: $breakpoint-small) {
+        padding: $spacing-small;
+    }
+}

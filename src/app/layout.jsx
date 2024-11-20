@@ -4,6 +4,7 @@ import React from 'react'
 import Header from '../components/Header/Header'
 import WishlistOverlay from '../components/WishlistOverlay/WishlistOverlay'
 import { MovieProvider, useMovieContext } from '../contexts/MovieContext'
+import '../scss/main.scss'
 
 export default function RootLayout({ children }) {
   return (
@@ -17,7 +18,9 @@ export default function RootLayout({ children }) {
         <MovieProvider>
           <LayoutContent>
             <Header />
-            {children}
+            <main className="main-content">
+              {children}
+            </main>
           </LayoutContent>
         </MovieProvider>
       </body>
@@ -25,13 +28,12 @@ export default function RootLayout({ children }) {
   )
 }
 
-// Create a new component to use the context
 function LayoutContent({ children }) {
   const { isWishlistOpen } = useMovieContext()
   return (
-    <>
+    <div className="layout-wrapper">
       {children}
       {isWishlistOpen && <WishlistOverlay />}
-    </>
+    </div>
   )
 }
