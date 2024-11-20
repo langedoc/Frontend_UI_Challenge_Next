@@ -1,12 +1,12 @@
 import React from 'react';
 import './Detailed.scss';
-import { useLocation } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
 import { useMovieContext } from '../../contexts/MovieContext';
 import CustomButton from '../CustomButton/CustomButton';
 
 export default function Detailed() {
-    const location = useLocation();
-    const movie = location.state?.movie;
+    const searchParams = useSearchParams();
+    const movie = JSON.parse(searchParams.get('movie') || 'null');
     const { setWishlist, wishlist, listType } = useMovieContext();
     
     if (!movie) {

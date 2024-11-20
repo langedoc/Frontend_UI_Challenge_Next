@@ -3,11 +3,9 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import WishlistOverlay from '../components/WishlistOverlay/WishlistOverlay'
-import { useMovieContext } from '../contexts/MovieContext'
+import { MovieProvider, useMovieContext } from '../contexts/MovieContext'
 
 export default function RootLayout({ children }) {
-  const { isWishlistOpen } = useMovieContext()
-
   return (
     <html lang="en">
       <head>
@@ -17,11 +15,23 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <MovieProvider>
-          <Header />
-          {children}
-          {isWishlistOpen && <WishlistOverlay />}
+          <LayoutContent>
+            <Header />
+            {children}
+          </LayoutContent>
         </MovieProvider>
       </body>
     </html>
+  )
+}
+
+// Create a new component to use the context
+function LayoutContent({ children }) {
+  const { isWishlistOpen } = useMovieContext()
+  return (
+    <>
+      {children}
+      {isWishlistOpen && <WishlistOverlay />}
+    </>
   )
 }
