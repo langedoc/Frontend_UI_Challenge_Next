@@ -1,5 +1,6 @@
 import React from 'react';
-import './CustomButton.scss';
+// import './CustomButton.scss';
+import './CustomButton.css';
 
 export default function CustomButton ({ children, onClick }) {
     return (

@@ -4,9 +4,9 @@ const nextConfig = {
 
   sassOptions: {
     includePaths: ['./src/scss'],
+    prependData: `@import "variables";`
   },
 
-  // If you need to support importing images
   images: {
     domains: [
       'image.tmdb.org',
@@ -14,4 +14,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+module.exports = nextConfig
