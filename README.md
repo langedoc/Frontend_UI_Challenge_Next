@@ -1,6 +1,6 @@
 # Frontend_UI_Challenge
 
-A React-based web application for browsing movies. Users can explore movie details and add movies to a personal wishlist.
+A Next.js-based web application for browsing movies. Users can explore movie details and add movies to a personal wishlist.
 
 ## Features
 
@@ -21,10 +21,9 @@ A React-based web application for browsing movies. Users can explore movie detai
 
 ## Technologies Used
 
+- Next.js 14
 - React 18
-- React Router DOM
 - SASS/SCSS for styling
-- Webpack for bundling
 - Jest for testing
 - React Testing Library
 - React Icons
@@ -55,7 +54,7 @@ npm install
    - Create a `.env` file in the root of the project
    - Add your API key to the `.env` file:
    ```bash
-   API_KEY=your_api_key_here
+   NEXT_PUBLIC_API_KEY=your_api_key_here
    ```
 
 ### Running the Application
@@ -63,13 +62,19 @@ npm install
 Development mode:
 
 ```bash
-npm start
+npm run dev
 ```
 
-Run SASS compiler:
+Build for production:
 
 ```bash
-npm run sass
+npm run build
+```
+
+Start production server:
+
+```bash
+npm run start
 ```
 
 ### Testing
