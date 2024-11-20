@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
-import RootLayout from './RootLayout';
+import RootLayout from '../../pages/RootLayout/RootLayout';
 import { MovieProvider } from '../../contexts/MovieContext';
 
 // Mock the api service
