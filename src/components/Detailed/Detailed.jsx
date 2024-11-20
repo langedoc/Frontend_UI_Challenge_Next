@@ -18,13 +18,13 @@ export default function Detailed() {
     }
 
     const handleAddMovie = () => {
-        if (!wishlist.includes(movie)) {
+        if (!wishlist.some(item => item.id === movie.id)) {
             setWishlist([...wishlist, movie]);
         }
     }
 
     const handleRemoveMovie = () => {
-        setWishlist(wishlist.filter(item => item.id !== movie.id))
+        setWishlist(wishlist.filter(item => item.id !== movie.id));
     }
 
     const getListStyle = () => {
@@ -49,7 +49,7 @@ export default function Detailed() {
                     />
                 </div>
                 <div className="detailed_main_info">
-                    {wishlist.includes(movie) ? (
+                    {wishlist.some(item => item.id === movie.id) ? (
                         <CustomButton onClick={handleRemoveMovie}>Remove from Wishlist</CustomButton>
                     ) : (
                         <CustomButton onClick={handleAddMovie}>Add to Wishlist</CustomButton>
