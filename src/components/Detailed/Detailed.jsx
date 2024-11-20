@@ -2,7 +2,7 @@ import React from 'react';
 import './Detailed.scss';
 import { useLocation } from 'react-router-dom';
 import { useMovieContext } from '../../contexts/MovieContext';
-import CustomButton from '../../components/CustomButton/CustomButton';
+import CustomButton from '../CustomButton/CustomButton';
 
 export default function Detailed() {
     const location = useLocation();

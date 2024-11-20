@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMovieContext } from '../../contexts/MovieContext';
-import ItemList from '../../components/ItemList/ItemList';
+import ItemList from '../ItemList/ItemList';
 import './Home.scss';
 
 export default function Home() {
