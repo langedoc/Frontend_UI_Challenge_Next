@@ -1,0 +1,22 @@
+@use '../../scss/variables' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $top-header-spacing;
+    padding: $spacing-large $spacing-xlarge;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: $font-size-logo;
+        background: linear-gradient(to right, $popular-movies-color, $upcoming-movies-color, $top-rated-movies-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

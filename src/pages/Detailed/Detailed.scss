@@ -1,0 +1,77 @@
+@use '../../scss/_variables.scss' as *;
+
+.detailed {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xlarge;
+    padding: $top-header-spacing+$spacing-base $spacing-xlarge;
+}
+
+.popular {
+    font-family: $popular-movies-font;
+    background: radial-gradient(circle at bottom right, $popular-movies-color, $background-color 35%);
+    
+    button {
+        box-shadow: 0 0 $spacing-base $popular-movies-color;
+        font-family: $popular-movies-font;
+    }
+}
+
+.upcoming {
+    font-family: $upcoming-movies-font;
+    background: radial-gradient(circle at bottom right, $upcoming-movies-color, $background-color 35%);
+    
+    button {
+        box-shadow: 0 0 $spacing-base $upcoming-movies-color;
+        font-family: $upcoming-movies-font;
+    }
+}
+
+.topRated {
+    font-family: $top-rated-movies-font;
+    background: radial-gradient(circle at bottom right, $top-rated-movies-color, $background-color 35%);
+
+    button {
+        box-shadow: 0 0 $spacing-base $top-rated-movies-color;
+        font-family: $top-rated-movies-color;
+    }
+}
+
+.detailed_main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60vh;
+    gap: $spacing-xlarge;
+}
+
+.detailed_main_poster {
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.detailed_main_info {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-large;
+    align-items: flex-start;
+
+    button {
+        font-weight: 600;
+        font-size: $font-size-large
+    }
+
+    p {
+        font-size: $font-size-base;
+        text-align: justify;
+    }
+}
+
+.detailed_additional {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-base;
+}
+
