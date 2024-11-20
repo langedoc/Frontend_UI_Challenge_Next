@@ -41,7 +41,6 @@ a {
 
 .main-content {
     padding: $spacing-base;
-    margin-top: $top-header-spacing;
     
     @media (max-width: $breakpoint-small) {
         padding: $spacing-small;
